@@ -14,7 +14,11 @@ so this portion of handle_choices ----
     if choice in ['3', 'r', 'remove']: crud.remove_item(list_, line_sep)
 
 could look something like this:
-    if choice in options.add.arr: options.add.func
+    options = [ {arr: ['1', 'a', 'add'], func: crud.add_item(), args: [list_, line_sep] }, ETC ]
+
+    for option in options:
+        if choice in option[arr]: option[func](**option[args])
+    this is pseudocode for sure, but something like this
 
 this could look
 
