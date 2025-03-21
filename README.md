@@ -4,7 +4,19 @@ This was a relatively straightforward assignment.
 
 I haven't worked with too many exceptions specifically in python, so getting the handle on it was useful.
 
+**UPDATE** - 3.21.25
+Got some feedback to make it more modular, while not quite necessary for a small project, it is good practice.
+Further, this could be scaled with a dictionary with input options array and correlating function:
 
+so this portion of handle_choices ---- 
+    if choice in ['1', 'a', 'add']: crud.add_item(list_, line_sep)
+    if choice in ['2', 'v', 'view']: crud.view_todos(list_, line_sep)
+    if choice in ['3', 'r', 'remove']: crud.remove_item(list_, line_sep)
+
+could look something like this:
+    if choice in options.add.arr: options.add.func
+
+this could look
 
 Here's the assignment:
 
